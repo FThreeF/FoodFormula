@@ -1,0 +1,49 @@
+.buttonMenu {
+  width: 24px;
+  height: 40px;
+  border: none;
+  background-color: #191a1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  transition: 200ms ease-in-out;
+}
+
+.active {
+  transform: scale(-1);
+  transition: 200ms ease-in-out;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10%;
+  background-color: inherit;
+  width: 50%;
+  height: 2px;
+  transform: translateY(-80%) rotate(45deg);
+}
+
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10%;
+  background-color: inherit;
+  width: 50%;
+  height: 2px;
+  transform: translateY(80%) rotate(-45deg);
+}

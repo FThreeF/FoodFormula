@@ -1,0 +1,13 @@
+.myTextLogo {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.myTextLogo > span {
+    font-size: 28px;
+    color: #3d50fa;
+    text-shadow: 0 0 10px #3d50fa;
+    border-radius: 4px;
+    padding: 0px;
+}

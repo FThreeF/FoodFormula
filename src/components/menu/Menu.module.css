@@ -1,0 +1,42 @@
+.menu {
+  min-width: 0px;
+  width: 0;
+  height: 100%;
+  background-color: #191a1f;
+  color: white;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu.active {
+    min-width: 220px;
+    width: 220px;
+    transition: 300ms ease-in-out;
+}
+
+.main {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.group {
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+}

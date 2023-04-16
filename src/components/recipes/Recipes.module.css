@@ -1,0 +1,11 @@
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: baseline;
+  overflow-y: scroll;
+}
+
+.recipes::-webkit-scrollbar {
+    width: 0px;
+}
