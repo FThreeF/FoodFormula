@@ -1,17 +1,25 @@
 import React from 'react';
-import cl from './Recipe.module.css';
 import MyText from '../UI/myText/MyText';
+import cl from './Recipe.module.css';
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, setLike, setRecipe }) => {
   return (
     <div className={cl.recipe}>
-      <div className={cl.image}></div>
+      <img
+        src={recipe.image}
+        onClick={() => setRecipe(true, recipe)}
+        className={cl.image}
+      ></img>
       <div className={cl.group}>
         <div style={{ display: 'flex', gap: '10px' }}>
-          <div className={cl.button}></div>
-          <MyText active>{recipe.title}</MyText>
+          <div
+            onClick={() => setLike(recipe)}
+            className={[cl.button, recipe.like && cl.active].join(' ')}
+          ></div>
+          <MyText className={cl.title} active>
+            {recipe.title}
+          </MyText>
         </div>
-        <MyText>{recipe.text}</MyText>
       </div>
     </div>
   );

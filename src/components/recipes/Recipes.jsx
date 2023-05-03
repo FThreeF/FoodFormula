@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
 import cl from './Recipes.module.css';
 import Recipe from '../recipe/Recipe';
+import MyText from '../UI/myText/MyText';
 
-const Recipes = () => {
-  const [recipes, setRecipes] = useState([
-    { id: 0, image: '', title: 'One', text: 'onaosda' },
-    { id: 1, image: '', title: 'One', text: 'onaosda' },
-    { id: 2, image: '', title: 'Ondsae', text: 'onaosda' },
-    { id: 2, image: '', title: 'Ondsae', text: 'onaosda' },
-    { id: 2, image: '', title: 'Ondsae', text: 'onaosda' },
-  ]);
-
+const Recipes = ({ setLike, recipes, setRecipes, setRecipe }) => {
   return (
     <div className={cl.recipes}>
-      {recipes.map((el) => (
-        <Recipe recipe={el} />
-      ))}
+      {recipes.length ? (
+        recipes.map((el) => (
+          <Recipe
+            key={el.id}
+            setLike={setLike}
+            recipe={el}
+            setRecipe={setRecipe}
+          />
+        ))
+      ) : (
+        <div className={cl.block}> 
+          <MyText active>У вас пока нет любимых рецептов.</MyText>
+        </div>
+      )}
     </div>
   );
 };

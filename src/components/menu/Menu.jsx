@@ -13,17 +13,9 @@ const Menu = ({ status, setStatus }) => {
       title: 'Основное',
       links: [
         { id: 0, title: 'Профиль', href: '/' },
-        { id: 1, title: 'Рецепты', href: '/recipes' },
-        { id: 2, title: 'Новости', href: '/news' },
-      ],
-    },
-    {
-      id: 2,
-      title: 'Мои рецепты',
-      links: [
-        { id: 0, title: 'Понравившиеся', href: '/' },
-        { id: 1, title: 'Мои рецепты', href: '/' },
-        { id: 2, title: 'Добавить рецепт', href: '/' },
+        { id: 1, title: 'Новости', href: '/news' },
+        { id: 2, title: 'Рецепты', href: '/recipes' },
+        { id: 3, title: 'Любимое', href: '/favoriteRecipes' },
       ],
     },
   ]);

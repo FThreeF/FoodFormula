@@ -1,9 +1,9 @@
 import React from 'react';
 import cl from './MyText.module.css';
 
-const MyText = ({ children, active, ...props }) => {
+const MyText = ({ children, className, active, ...props }) => {
   return (
-    <p className={[cl.myText, active && cl.active].join(' ')} {...props} >{children}</p>
+    <p className={[cl.myText, className, active && cl.active].join(' ')} {...props} >{children}</p>
   );
 };
 

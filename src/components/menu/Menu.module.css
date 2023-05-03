@@ -10,8 +10,8 @@
 }
 
 .menu.active {
-    min-width: 220px;
-    width: 220px;
+    min-width: 180px;
+    width: 180px;
     transition: 300ms ease-in-out;
 }
 

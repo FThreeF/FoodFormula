@@ -1,0 +1,92 @@
+.modalRecipe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #16171b;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 32px;
+  width: 100%;
+  display: flex;
+}
+
+.image { 
+  display: flex;
+  min-width: 192px;
+  min-height: 192px;
+  max-width: 192px;
+  max-height: 192px;
+  background: #23242a;
+  border-radius: 12px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.recipe {
+    display: flex;
+    gap: 4px;
+    position: relative;
+    z-index: 1;
+    padding: 8px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: 100ms ease-in-out;
+}
+
+.recipe::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #292a32;
+    opacity: 0;
+}
+
+.recipe:hover.recipe::after {
+    opacity: 1;
+}
+
+.recipe:hover {
+    transform: scale(1.05);
+}
+
+.recipe:active {
+    transform: scale(1.1);
+}
+
+
+.button {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 88px;
+    height: 28px;
+    min-height: 28px;
+    min-width: 88px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.textRecipe {
+    font-size: 24px;
+}
