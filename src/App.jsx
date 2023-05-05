@@ -19,6 +19,9 @@ const App = () => {
   const [isMenu, setIsMenu] = useState(true);
 
   const onMenuHandler = () => setIsMenu(!isMenu);
+  const [profile, setProfile] = useState({ name: 'none', email: 'none' });
+  const [status, setStatus] = useState(false);
+
   const [recipes, setRecipes] = useState([
     {
       id: 0,
@@ -141,7 +144,7 @@ const App = () => {
         <Routes>
           <Route
             path='/'
-            element={<Profile countRecipe={favoriteRecipes.length} />}
+            element={<Profile status={status} setStatus={setStatus} profile={profile} setProfile={setProfile} countRecipe={favoriteRecipes.length} />}
           />
           <Route path='/news' element={<News />} />
           <Route

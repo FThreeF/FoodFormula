@@ -35,5 +35,9 @@
     border: none;
     border-radius: 4px;
     padding: 4px 12px;
-
+    color: white;
+    background-color: rgb(250, 100, 50);
+    box-shadow: 0 0 10px rgb(250, 100, 50);
+    height: 32px;
+    cursor: pointer;
 }
